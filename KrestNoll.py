@@ -1,10 +1,14 @@
 field = [['-', '-', '-'],
          ['-', '-', '-'],
          ['-', '-', '-']]
+
+
 def show_field(a):
     print("  0 1 2")
     for i in range(len(field)):
         print(str(i), *field[i])
+
+
 def player_input(a):
     while True:
         coordinates = input("Введите координаты : ").split()
@@ -23,6 +27,8 @@ def player_input(a):
             continue
         break
     return x, y
+
+
 def win_game(a, player):
     win_coord = (((0, 0), (0, 1), (0, 2)), ((1, 0), (1, 1), (1, 2)), ((2, 0), (2, 1), (2, 2)),
                  ((0, 0), (1, 0), (2, 0)), ((0, 1), (1, 1), (2, 1)), ((0, 2), (1, 2), (2, 2)),
@@ -34,6 +40,8 @@ def win_game(a, player):
         if symbols == [player, player, player]:
             return True
     return False
+
+
 count = 0
 print('Добро пожаловать в игру "крестики-нолики"')
 while True:
